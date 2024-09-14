@@ -1,0 +1,22 @@
+name: 'Publish to Medium'
+
+on:
+  push:
+    branches:
+      - 'main'
+    paths:
+      - 'articles/*'
+
+jobs:
+  publish:
+    name: Publish Blog Article
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run Blogpub Action
+        uses: protiumx/blogpub@v0.8.0
+        with:
+          medium_token: ${{ secrets.MEDIUM_TOKEN }}
+          medium_user_id: 1da0fc68002c76c5eb174e28702d7579373643f0d36b30bc3bff9868d781669ba
