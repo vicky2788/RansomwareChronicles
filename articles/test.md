@@ -8,4 +8,4 @@ canonicalUrl: https://example.com/my-first-blog
 ---
 # My First Blog Post
 
-Welcome to my first blog post using Blogpub!
+Welcome to my first blog post using Blogpub
